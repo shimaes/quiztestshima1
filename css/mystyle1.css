@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(182, 240, 185);
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    }
+    #container{
+        width: 80%;
+        background-color: rgb(48, 228, 159);
+        overflow: hidden;
+        margin: 20px auto;
+        padding: 25PX;
+    }
+    header{
+        text-align: center;
+        border-bottom: 50px dashed rgb(126, 236, 218);
+        
+    }
+    header h1{
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    header p{
+        font-variant: smallcaps;
+    }
+    section{
+        min-height: 400px;
+    }
+    footer{
+        text-align: center ;
+    }
+    input[type="submit"]{
+        background-color: #333;
+        color: #fff;
+        padding: 15px 25px;
+        border: none;
+    }
+    #result{
+        background-color: rgb(17, 236, 163);
+        color: #fff;
+    }
+    #result h3{
+        padding: 10px;
+        margin: 10px 0px;
+    }
+    result span{
+        color: rgb(179, 62, 68);
+        font-weight: bold;
+    }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet"  type="text/css"  href="css/mystyle1.css">
+    <script  type="text/javascript" scr="js/functionsubmit.js"></script>
+    
+  </head>
+
+    <body>
+
+        <titel>Quize Test</titel>
+     <div id="container"></div>
+      <header>   
+        <h1>shima quize</h1>  
+        <p>test your shima knowlege<strong>shimabasic</strong></p>
+      </header>
+        <section>
+        <div id="result">
+          <form name="quizeform" onsubmit="(e) => submitanswers(e)">
+            <h3> چطور راحت خوشحالش کنیم؟</h3>
+            <input type="radio" name="q1" value="a">a. &it;شکلات&gt;<br>  
+            <input type="radio" name="q1" value="b">b. پاستا<br>
+            <input type="radio" name="q1" value="c">c. پیتزا<br>
+            <input type="radio" name="q1" value="d">d. بغل<br>
+
+            <h3> چطور با زحمت خوشحال ترش کنیم؟</h3>
+            <input type="radio" name="q2" value="a">a.اسکی <br>
+            <input type="radio" name="q2" value="b">b. سفر <br>
+            <input type="radio" name="q2" value="c">c. موتور <br>
+            <input type="radio" name="q2" value="d">d. شهر بازی<br>
+
+            <h3> چطور به جوش بیاریم خونشو م؟</h3>
+            <input type="radio" name="q3" value="a">a. فوش <br>
+            <input type="radio" name="q3" value="b">b. بی توجهی  <br>
+            <input type="radio" name="q3" value="c">c. دروغ <br>
+            <input type="radio" name="q3" value="d">d.   کتک <br>
+
+            <h3> چطور توکار راضیه ؟</h3>
+            <input type="radio" name="q4" value="a">a. تاثیر گذاری <br>
+            <input type="radio" name="q4" value="b">b. خروجی  <br>
+            <input type="radio" name="q4" value="c">c. بیکاری <br>
+            <input type="radio" name="q4" value="d">d. تلاش زیاد<br>
+            <br></br>
+            
+            <button onclick="submitanswers()" type="button" >submit</button>
+            <button id="submit">Get Results</button>
+
+          </form>
+              <footer>
+              <p>copyright </p>
+              </footer>
+
+          </div>
+        </section>
+        <script>
+          function submitanswers(e){
+            // e.preventDefault()
+        console.log("SUBMIT");
+        var total=4;
+        var score=0;
+        console.log(document.forms);
+        var q1=document.forms["quizeform"]["q1"].value;
+        var q2=document.forms["quizeform"]["q2"].value;
+        var q3=document.forms["quizeform"]["q3"].value;
+        var q4=document.forms["quizeform"]["q4"].value;
+        for (var i =1 ; i <= total; i++){
+          console.log("for1");
+          if( eval('q'+i)==null || eval('q'+i)=='')
+          {
+            alert("سوالی رو خالی گذاشتی"+i);
+            return false;
+          }
+        }
+        var ansewer=["b","a","b","a"];
+        for (var i = 1; i <= total; i++){
+          console.log("for2");
+            if( eval('q'+i)==ansewer[i])
+            {
+               score++;
+            }
+        }
+        var result=document.getElementById('result');
+        result.innerHTML='<h3>yourscores<span>'+score+'</span> out of <span>'+total+'</span> </h3>';
+        return false;
+    }
+    
+        </script>
+
+
+    </body>     
+</html>
